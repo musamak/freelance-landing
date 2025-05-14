@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freelance Tech Expert - GCC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
+    }
+
+    .hero-banner {
+        background-image: url('assets/images/banner.jpg'); /* Replace with your image path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .hero-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); /* Optional: dark overlay for readability */
+        z-index: 1;
+    }
+
+    .hero-banner .container {
+        position: relative;
+        z-index: 2;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-light">
+  <div class="lang-toggle">
+    <button class="btn btn-primary btn-sm" onclick="switchLanguage('en')">English</button>
+    <button class="btn btn-secondary btn-sm" onclick="switchLanguage('ar')">العربية</button>
+  </div>
+
+  <header class="hero-banner text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4" data-en="Your Expert Tech Partner in the GCC" data-ar="شريكك التقني الموثوق في دول الخليج">Your Expert Tech Partner in the GCC</h1>
+      <p class="lead" data-en="IoT, Backend, AI, API Integration, Offline Automation" data-ar="انترنت الأشياء، الأنظمة الخلفية، الذكاء الاصطناعي، تكامل API، الأتمتة دون اتصال">IoT, Backend, AI, API Integration, Offline Automation</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <section class="mb-5">
+      <h2 data-en="Who I Am" data-ar="من أنا">Who I Am</h2>
+      <p data-en="As a freelance Solution Architect with over 15 years of experience, I architect end to end solutions that propel digital transformation and operational excellence across diverse industries. I blend expertise in backend (.NET Core, C#), frontend (Angular, Vue.js), cloud (Azure, AWS), data analytics (SQL, Python), and containerization (Docker, Kubernetes) into cohesive, scalable architectures. Grounded in SOLID principles, Clean Code, and KISS, I deliver maintainable, high performance platforms that adapt seamlessly to evolving business needs. I’ve developed AI chatbots and am pioneering Agentic AI experiments integrated with IoT as Industry 4.0 showcase projects, unlocking new opportunities for innovation. My approach prioritizes collaboration, aligning technology roadmaps with strategic objectives and fostering cross functional synergy to achieve measurable ROI. Let’s connect to explore how I can architect your next transformative initiative and deliver bespoke software solutions that drive real business impact." 
+         data-ar="بصفتي مهندس حلول مستقل يتمتع بخبرة تزيد عن 15 عامًا، أقوم بتصميم حلول متكاملة تدفع التحول الرقمي وتعزز التميز التشغيلي عبر صناعات متنوعة. أمزج بين خبرتي في البرمجة الخلفية (.NET Core، C#)، الواجهات الأمامية (Angular، Vue.js)، الحوسبة السحابية (Azure، AWS)، تحليلات البيانات (SQL، Python)، وتقنيات الحاويات (Docker، Kubernetes) لبناء هياكل تقنية متماسكة وقابلة للتوسع. ألتزم بمبادئ SOLID وClean Code ومبدأ KISS، وأقدم منصات عالية الأداء وقابلة للصيانة تتكيف بسلاسة مع احتياجات الأعمال المتغيرة. لقد طورت روبوتات محادثة تعتمد على الذكاء الاصطناعي (AI) وأقود تجارب مبتكرة في مجال Agentic AI مدمجة مع تقنيات IoT كمشاريع عرضية لثورة الصناعة الرابعة (Industry 4.0)، مما يفتح آفاقًا جديدة للابتكار. أُعطي الأولوية للتعاون، وتوافق خارطة الطريق التقنية مع الأهداف الاستراتيجية، وتعزيز التناغم بين الفرق لتحقيق عائد استثماري (ROI) قابل للقياس. دعنا نتواصل لاستكشاف كيف يمكنني تصميم مبادرتك التحولية القادمة وتقديم حلول برمجية مخصصة تُحدث تأثيرًا حقيقيًا في عملك.">As a freelance Solution Architect with over 15 years of experience, I architect end to end solutions...</p>
+      <br/>
+      <div style="display: inline-flex;">
+        <p data-en="Drop me a message here or email me directly at "
+            data-ar="راسلني هنا أو عبر البريد الإلكتروني ">
+        </p>
+        &nbsp; <a id="email_call_to_action" href="mailto:${email}">${email}</a>.
+      </div>
+      <br/>
+      <div style="display: inline-flex;">
+        <p data-en="Connect with me on LinkedIn: "
+            data-ar="تواصل معي على لينكدإن: ">
+        </p>
+        &nbsp; 
+        <a id="linkedin_call_to_action" href="https://linkedin.com/in/${linkedin}" target="_blank">${linkedin}</a>    
+      </div>  
+    </section>
+
+    <section class="mb-5">
+      <h2 data-en="What I Do" data-ar="ماذا أقدم">What I Do</h2>
+      <ul class="list-group">
+        <li class="list-group-item" data-en="Backend & API Integration (.NET, SQL Server, Oracle, Redis)" data-ar="تكامل الأنظمة الخلفية وواجهات البرمجة (.NET، SQL Server، Oracle، Redis)">Backend & API Integration (.NET, SQL Server, Oracle, Redis)</li>
+        <li class="list-group-item" data-en="Frontend (Bootstrap, Vue.js, WinForms, WPF, ASP.Net Razor, Electron.js, MAUI)" data-ar="الواجهات الأمامية (Bootstrap، Vue.js، WinForms، WPF، ASP.Net Razor، Electron.js، MAUI)">Frontend (Bootstrap, Vue.js, WinForms, WPF, ASP.Net Razor, Electron.js, MAUI)</li>
+        <li class="list-group-item" data-en="IoT Projects (LoRa, GPS, Raspberry Pi, marine/off-grid tech)" data-ar="مشاريع انترنت الأشياء (LoRa، GPS، Raspberry Pi، تقنيات بحرية/بعيدة)">IoT Projects (LoRa, GPS, Raspberry Pi, marine/off-grid tech)</li>
+        <li class="list-group-item" data-en="AI Automation (Chatbots, Vosk voice tools, report bots)" data-ar="أتمتة الذكاء الاصطناعي (روبوتات محادثة، أدوات صوتية Vosk، تقارير تلقائية)">AI Automation (Chatbots, Vosk voice tools, report bots)</li>
+        <li class="list-group-item" data-en="Legacy System Modernization & Optimization" data-ar="تحديث وتحسين الأنظمة القديمة">Legacy System Modernization & Optimization</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h2 data-en="Why Work With Me" data-ar="لماذا تتعاون معي؟">Why Work With Me</h2>
+      <ul class="list-group">
+        <li class="list-group-item" data-en="GCC-based, understands local business and technical needs" data-ar="مقيم في الخليج وأفهم احتياجات السوق المحلي التقنية">GCC-based, understands local business and technical needs</li>
+        <li class="list-group-item" data-en="Deliver results fast — no overhead, no bloated processes" data-ar="أقدم نتائج سريعة بدون تعقيدات أو عمليات مرهقة">Deliver results fast — no overhead, no bloated processes</li>
+        <li class="list-group-item" data-en="Project-based, freelance, or white-label delivery options" data-ar="مرونة في نماذج التعاون: مشاريع مستقلة أو توكيل خارجي">Project-based, freelance, or white-label delivery options</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-en="Let’s Talk" data-ar="تواصل معي">Let’s Talk</h2>
+      <form id="contactForm" action="#" method="POST" class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" data-en="Your Name" data-ar="اسمك">Your Name</label>
+          <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" data-en="Your Email" data-ar="بريدك الإلكتروني">Your Email</label>
+          <input type="email" name="email" class="form-control" required>
+        </div>
+        <div class="col-12">
+          <label class="form-label" data-en="Message" data-ar="رسالتك">Message</label>
+          <textarea name="message" rows="5" class="form-control" required></textarea>
+        </div>
+        <div class="col-12">
+            <button id="submitBtn" type="submit" class="btn btn-success">
+                <span id="submitText" data-en="Send" data-ar="إرسال">Send</span>
+                <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+            </button>              
+        </div>
+      </form>
+      <div id="formMessage" class="mt-3"></div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container" dir="ltr">
+      <div class="mb-2">
+        <a id="linkedinLink" href="#" target="_blank" class="me-3"><i class="fab fa-linkedin"></i></a>
+        <a id="twitterLink" href="#" target="_blank" class="me-3"><i class="fab fa-twitter"></i></a>
+        <a id="instagramLink" href="#" target="_blank"  class="me-3"><i class="fab fa-instagram"></i></a>
+      </div>
+      &copy; <span id="year"></span> <span id="owner">Freelancer</span>. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    function switchLanguage(lang) {
+      const elements = document.querySelectorAll('[data-en]');
+      elements.forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      });
+    }
+
+    function getQueryParam(param) {
+      return new URLSearchParams(window.location.search).get(param);
+    }
+
+    function populateDynamicContent() {
+      const email =  'smusama@protonmail.com';
+      const linkedin = 'muhammadusamakhan';
+      const twitter = 'robotachio';
+      const instagram = 'robotachio';
+      const emailCTAElement = document.querySelector('#email_call_to_action');
+      const linkedInCTAElement = document.querySelector('#linkedin_call_to_action');
+
+      document.querySelector('#email_call_to_action').href = `mailto:${email}`;
+      document.querySelector('#email_call_to_action').textContent = `${email}`;
+      document.querySelector('#linkedin_call_to_action').href = `https://linkedin.com/in/${linkedin}`;
+      document.querySelector('#linkedin_call_to_action').textContent = `${linkedin}`;
+      document.querySelector('#contactForm').setAttribute('action', `https://formspree.io/f/mldbadgg`);
+      document.querySelector('#linkedinLink').href = `https://linkedin.com/in/${linkedin}`;
+      document.querySelector('#twitterLink').href = `https://x.com/${twitter}`;
+      document.querySelector('#instagramLink').href = `https://instagram.com/${instagram}`;
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById('owner').textContent = `${linkedin}`;
+    }
+    
+    populateDynamicContent();
+    switchLanguage('ar');
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contactForm');
+      const messageDiv = document.getElementById('formMessage');
+      const submitBtn = document.getElementById('submitBtn');
+      const spinner = document.getElementById('spinner');
+      const submitText = document.getElementById('submitText');
+      const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mldbadgg'; 
+    
+      const messages = {
+        en: {
+          success: "Message sent successfully!",
+          error: "Error sending message. Please try again later.",
+          formError: "Something went wrong.",
+          send: "Send"
+        },
+        ar: {
+          success: "تم إرسال الرسالة بنجاح!",
+          error: "حدث خطأ أثناء إرسال الرسالة. حاول مرة أخرى لاحقًا.",
+          formError: "حدث خطأ ما.",
+          send: "إرسال"
+        }
+      };
+    
+      function getCurrentLang() {
+        return document.documentElement.lang === 'ar' ? 'ar' : 'en';
+      }
+    
+      function toggleSpinner(show) {
+        if (show) {
+          spinner.classList.remove('d-none');
+          submitBtn.disabled = true;
+        } else {
+          spinner.classList.add('d-none');
+          submitBtn.disabled = false;
+        }
+      }
+    
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const lang = getCurrentLang();
+        toggleSpinner(true);
+        messageDiv.innerHTML = '';
+    
+        try {
+          const response = await fetch(FORMSPREE_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+          });
+    
+          if (response.ok) {
+            messageDiv.innerHTML = `<div class="alert alert-success">${messages[lang].success}</div>`;
+            form.reset();
+          } else {
+            const data = await response.json();
+            const errorMsg = data.errors?.[0]?.message || messages[lang].formError;
+            messageDiv.innerHTML = `<div class="alert alert-danger">${errorMsg}</div>`;
+          }
+        } catch (error) {
+          messageDiv.innerHTML = `<div class="alert alert-danger">${messages[lang].error}</div>`;
+        } finally {
+          toggleSpinner(false);
+        }
+      });
+    
+      // Update "Send" button text when switching language
+      function updateSubmitText(lang) {
+        submitText.textContent = messages[lang].send;
+      }
+    
+      // Override your switchLanguage to also update submit text
+      const originalSwitchLang = switchLanguage;
+      switchLanguage = function (lang) {
+        originalSwitchLang(lang);
+        updateSubmitText(lang);
+      };
+    
+      // Initialize submit text on load
+      updateSubmitText(getCurrentLang());
+    });
+    </script>    
+</body>
+</html>
